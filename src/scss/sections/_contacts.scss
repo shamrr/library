@@ -1,0 +1,21 @@
+.contacts{
+    padding: 2rem 0 4rem 0;
+    &__container{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__subtitle{
+        margin-bottom: 4rem;
+    }
+    &__text{
+        font-weight: 700;
+        letter-spacing: .2rem;
+    }
+    &__item{
+        letter-spacing: .2rem;
+        a{
+            color: #000;
+            cursor: pointer;
+        }
+    }
+}

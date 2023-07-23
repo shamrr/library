@@ -1,0 +1,40 @@
+.header{
+    background-color: $main-black;
+    &__line{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 9rem;
+    }
+    &__container{
+        display: flex;
+    }
+    .navbar{
+        display: flex;
+        align-items: center;
+        height: 5rem;
+        &__item:not(:last-child){
+            margin-right: 3rem;
+        }
+        &__item:last-child{
+            margin-right: 4rem;
+        }
+        &__link{
+            color: #FFF;
+            font-size: 2rem;
+            font-style: normal;
+            font-weight: 400;
+            transition: all .4s;
+            &:hover{
+                color: $main;
+            }
+        }
+    }
+    .icons{
+        align-self: center;
+        svg{
+            width: 2.8rem;
+            height: 2.8rem;
+        }
+    }
+}

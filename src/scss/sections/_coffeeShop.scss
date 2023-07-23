@@ -1,0 +1,45 @@
+.coffee-shop{
+    padding: 2rem  0 4rem 0;
+    &__subtitle{
+        margin-bottom: 4rem;
+    }
+    &__text{
+        margin-bottom: 4rem;
+        letter-spacing: .2rem;
+        text-align: center;
+    }
+    &__container{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title{
+        color: $main;
+        font-family: 'Forum', cursive;
+        font-size: 4rem;
+        font-weight: 400;
+        letter-spacing: .2rem;
+        text-transform: capitalize;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+    &__item{
+        display: flex;
+        width: 43.8rem;
+        justify-content: space-between;
+        &-text{
+            min-width: 19.7rem;
+        }
+        &:not(:last-child){
+            margin-bottom: 4rem;
+        }
+    }
+    .line{
+        width: 10rem;
+        height: 0.1rem;
+        background-color: $main;
+        align-self: center;
+    }
+    &__container-left{
+        text-align: right;
+    }
+}

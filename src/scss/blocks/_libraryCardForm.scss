@@ -1,0 +1,44 @@
+.library-card-form{
+    border: .3rem solid $main;
+    padding: 2rem 2rem 3rem 2rem;
+    box-shadow: 0 .4rem .4rem 0 rgba(0, 0, 0, 0.25);
+    &__container{
+        padding: 2rem 2rem 2.5rem 2rem;
+        max-width: 56rem;
+        background-color: $main;
+        margin-bottom: 2rem;
+    }
+	&__title{
+        font-family: 'Forum', cursive;
+        font-size: 3rem;
+        line-height: 5rem;
+        letter-spacing: 0.06rem;
+        margin-bottom: 2rem;
+    }
+	&__inputs{
+        display: flex;
+        flex-direction: column;
+    }
+	&__input{
+        // width: 100%;
+        width: 52rem;
+        color: #8E8E8E;
+        font-family: 'Forum', cursive;
+        font-size: 3rem;
+        font-weight: 400;
+        line-height: 5rem;
+        letter-spacing: 0.06rem;
+        border-radius: 1rem;
+        padding: .8rem 0 .8rem 2rem;
+        &:not(:last-child){
+            margin-bottom: 2.5rem;
+        }
+    }
+	&__btn{
+        padding: 1rem 4rem;
+        font-size: 2rem;
+        display: block;
+        margin: 0 auto;
+    }
+
+}

@@ -1,0 +1,15 @@
+.btn{
+    border-radius: .2rem;
+    border: .1rem solid $main-black;
+    color: $main-black;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    background-color: #fff;
+    transition: all .4s;
+    cursor: pointer;
+    &:hover{
+        background-color: $main;
+    }
+}

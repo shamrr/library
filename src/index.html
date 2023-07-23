@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('html/head.html', {
+        "title":"Главная"
+    })
+<body>
+    @@include('html/header.html', {})
+    <main>
+        @@include('html/sections/welcome.html', {})
+        @@include('html/sections/about.html', {})
+        @@include('html/sections/favorites.html', {})
+        @@include('html/sections/coffeeShop.html', {})
+        @@include('html/sections/contacts.html', {})
+        @@include('html/sections/libraryCards.html', {})
+    </main>
+    @@include('html/footer.html', {})
+    <script src="js/app.min.js"></script>
+</body>
+</html>
