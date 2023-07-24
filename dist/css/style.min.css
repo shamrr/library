@@ -445,7 +445,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 4rem;
   letter-spacing: 0.2rem;
   text-align: center;
-  padding: 0 1rem;
+  padding: 0 4rem;
 }
 .coffee-shop__container {
   display: flex;
