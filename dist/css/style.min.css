@@ -618,3 +618,6 @@ h1, h2, h3, h4, h5, h6 {
   height: 2.4rem;
   color: #BB945F;
 }
+.footer__content a {
+  color: #fff;
+}
