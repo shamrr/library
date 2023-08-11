@@ -3,10 +3,7 @@
     width: 100%;
     padding: 22rem 0 16rem 0;
     @include respond(phone){
-        padding: 15rem 0 15rem 0;
-    }
-    @include respond(small-phone){
-        padding: 10rem 0 15rem 0;
+        padding: 15rem 0 20rem 0;
     }
     &__block{
         color: #FFF;

@@ -561,12 +561,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media only screen and (max-width: 490px) {
   .welcome {
-    padding: 15rem 0 15rem 0;
-  }
-}
-@media only screen and (max-width: 410px) {
-  .welcome {
-    padding: 10rem 0 15rem 0;
+    padding: 15rem 0 20rem 0;
   }
 }
 .welcome__block {
