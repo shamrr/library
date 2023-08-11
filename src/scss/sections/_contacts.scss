@@ -3,6 +3,58 @@
     &__container{
         display: flex;
         justify-content: space-between;
+        &-right{
+            iframe{
+                width: 69.6rem;
+                height: 41.4rem;
+            }
+        }
+        
+        @include respond(tab-land){
+            &-right{
+                iframe{
+                    width: 50rem;
+                    height: 35rem;
+                }
+            }
+        }
+        @include respond(tab-main){
+            flex-direction: column;
+            row-gap: 10rem;
+            &-right{
+                align-self: center;
+                iframe{
+                    width: 69.6rem;
+                    height: 41.4rem;
+                }
+            }
+        }
+        @include respond(tab-port){
+            row-gap: 5rem;
+            &-right{
+                iframe{
+                    width: 46rem;
+                    height: 30rem;
+                }
+            }
+        }
+        @include respond(phone){
+            &-right{
+                iframe{
+                    width: 32rem;
+                    height: 20rem;
+                }
+            }
+        }
+        @include respond(small-phone){
+            row-gap: 3rem;
+            &-right{
+                iframe{
+                    width: 28rem;
+                    height: 20rem;
+                }
+            }
+        }
     }
     &__subtitle{
         margin-bottom: 4rem;

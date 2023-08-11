@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.min.css">
 
-    <title>Главная</title>
+    <title>Brooklyn Public Library</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
@@ -32,6 +32,9 @@
                         <use xlink:href="./img/icons/icons.svg#profile"></use>
                     </svg>
                 </a>
+                <div class="sidebar">
+                    <div class="hamburger"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -46,7 +49,7 @@
     <div class="container">
         <h2 class="subtitle about__subtitle">About</h2>
         <div class="text about__text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside </div>
-        <div class="slider">
+        <!-- <div class="slider">
             <div class="slider__line">
                 <img src="../img/slide1.jpg" alt="slide" class="slider__img">
                 <img src="../img/slide2.jpg" alt="slide" class="slider__img">
@@ -68,6 +71,45 @@
                 <div class="slider__dot  active-dot"></div>
                 <div class="slider__dot"></div>
                 <div class="slider__dot"></div>
+            </div>
+        </div> -->
+        <div id="carousel" class="carousel">
+            
+            <div class="gallery">
+                <div class="gallery__btn gallery__btn-prev">
+                    <svg>
+                        <use xlink:href="./img/icons/icons.svg#prev"></use>
+                    </svg>
+                </div>
+                <ul>
+                    <li>
+                        <img src="../img/slide1.jpg" alt="img">
+                    </li>
+                    <li>
+                        <img src="../img/slide2.jpg" alt="img">
+                    </li>
+                    <li>
+                        <img src="../img/slide3.jpg" alt="img">
+                    </li>
+                    <li>
+                        <img src="../img/slide4.jpg" alt="img">
+                    </li>
+                    <li>
+                        <img src="../img/slide5.jpg" alt="img">
+                    </li>
+                </ul>
+                <div class="gallery__btn gallery__btn-next">
+                    <svg>
+                        <use xlink:href="./img/icons/icons.svg#next"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="carousel__wrapper">
+                <div class="carousel__dot  active-dot"></div>
+                <div class="carousel__dot"></div>
+                <div class="carousel__dot"></div>
+                <div class="carousel__dot"></div>
+                <div class="carousel__dot"></div>
             </div>
         </div>
     </div>
@@ -419,7 +461,7 @@
                 <div class="text contacts__item">Library Director: <a href="mailto:AmandaHirst@gmail.com" class="fw-700">Amanda Hirst</a></div>
             </div>
             <div class="contacts__container-right">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.01597704244!2d-73.99387252404021!3d40.695645771396066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a49b649b8c3%3A0x6342a2291cea2e!2zMjg2IENhZG1hbiBQbGF6YSBXLCBCcm9va2x5biwgTlkgMTEyMDEsINCh0KjQkA!5e0!3m2!1sru!2sde!4v1689631257767!5m2!1sru!2sde" width="696" height="414" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.01597704244!2d-73.99387252404021!3d40.695645771396066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a49b649b8c3%3A0x6342a2291cea2e!2zMjg2IENhZG1hbiBQbGF6YSBXLCBCcm9va2x5biwgTlkgMTEyMDEsINCh0KjQkA!5e0!3m2!1sru!2sde!4v1689631257767!5m2!1sru!2sde"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </div>
@@ -488,7 +530,7 @@
                     </div>
                 </div>
                 <div class="footer__container-right">
-                    <div class="footer__text">
+                    <div class="footer__text mb-1rem">
                         Mon - Fri
                         <br>
                         08:00 am - 07:00 pm

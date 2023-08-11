@@ -10,12 +10,37 @@
             max-width: 45.6rem;
             text-align: right;
         }
+        @include respond(tab-main){
+            flex-direction: column;
+            align-items: center;
+            row-gap: 2.1rem;
+            &-right{
+                text-align: center;
+                max-width: 60rem;
+            }
+        }
+        @include respond(tab-port){
+            &-right{
+                max-width: 48rem;
+            }
+        }
+        @include respond(phone){
+            &-right{
+                max-width: 31rem;
+            }
+        }
     }
     &__title{
         font-size: 3rem;
         letter-spacing: 0.06rem;
         margin-bottom: 3rem;
         text-align: center;
+        @include respond(phone){
+            font-size: 2.5rem;
+        }
+        @include respond(phone){
+            font-size: 2.2rem;
+        }
     }
     &__sub{
         color: #000;
@@ -28,6 +53,9 @@
     &__text{
         letter-spacing: 0.04rem;
         margin-bottom: 3.5rem;
+        @include respond(tab-main){
+            margin-bottom: 4rem;
+        }
     }
     &__btn{
         width: 7.5rem;

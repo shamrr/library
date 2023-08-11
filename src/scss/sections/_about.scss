@@ -1,5 +1,8 @@
 .about{
     padding: 2rem 0 9.6rem 0;
+    @include respond(tab-main){
+        padding: 1.2rem 0 8.9rem 0;
+    }
     &__subtitle{
         margin-bottom: 4rem;
     }

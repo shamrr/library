@@ -2,6 +2,12 @@
     background-image: url("../img/welcome-background.jpg");
     width: 100%;
     padding: 22rem 0 16rem 0;
+    @include respond(phone){
+        padding: 15rem 0 15rem 0;
+    }
+    @include respond(small-phone){
+        padding: 10rem 0 15rem 0;
+    }
     &__block{
         color: #FFF;
         text-align: center;
@@ -13,5 +19,12 @@
         background-color: $main-black;
         max-width: 60rem;
         padding: 3.5rem 4rem;
+        @include respond(phone){
+            font-size: 3rem;
+        }
+        @include respond(small-phone){
+            font-size: 2.2rem;
+            line-height: 3.5rem;
+        }
     }
 }

@@ -8,10 +8,31 @@
         letter-spacing: .2rem;
         text-align: center;
         padding: 0 4rem;
+        @include respond(tab-main){
+            padding: 0;
+        }
     }
     &__container{
         display: flex;
         justify-content: space-between;
+        @include respond(tab-main){
+            flex-direction: column;
+            row-gap: 4rem;
+            &-right{
+                align-self: left;
+            }
+            &-left{
+                align-self: end;
+            }
+        }
+        @include respond(phone){
+            &-left{
+                align-self: center;
+            } 
+            &-right{
+                align-self: center;
+            }
+        }
     }
     &__title{
         color: $main;
@@ -24,17 +45,32 @@
         margin-bottom: 4rem;
         &-right{
             text-align: left;
+            @include respond(phone){
+                text-align: center;
+            }
         } 
         &-left{
             text-align: right;
+            @include respond(phone){
+                text-align: center;
+            }
         }
     }
     &__item{
         display: flex;
         width: 43.8rem;
         justify-content: space-between;
+        @include respond(phone){
+            width: 31rem;
+        }
+        @include respond(small-phone){
+            width: 28rem;
+        }
         &-text{
             min-width: 19.7rem;
+            @include respond(phone){
+                min-width: 18rem;
+            }
         }
         &:not(:last-child){
             margin-bottom: 4rem;
@@ -45,8 +81,14 @@
         height: 0.1rem;
         background-color: $main;
         align-self: center;
+        @include respond(phone){
+            width: 5rem;
+        }
     }
     &__container-left{
         text-align: right;
+        @include respond(phone){
+            text-align: left;
+        }
     }
 }

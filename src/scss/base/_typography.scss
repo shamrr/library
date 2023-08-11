@@ -29,6 +29,7 @@ html,body{
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     scroll-behavior: smooth;
+    position: relative;
 }
 input,button,textarea{
     font-family: inherit;
@@ -65,6 +66,25 @@ h1,h2,h3,h4,h5,h6{
     max-width: 140rem;
     width: 100%;
     margin: 0 auto;
+    @include respond(tab-big){
+        max-width: 125rem;
+    }
+    @include respond(tab-land){
+        max-width: 95rem;
+    }
+    @include respond(tab-main){
+        max-width: 72.7rem;
+    }
+    @include respond(tab-port){
+        max-width: 48rem;
+    }
+    @include respond(phone){
+        max-width: 35rem;
+    }
+    @include respond(small-phone){
+        max-width: 28rem;
+    }
+
 }
 
 .title{
@@ -75,6 +95,19 @@ h1,h2,h3,h4,h5,h6{
     font-weight: 400;
     line-height: 5rem;
     letter-spacing: .06rem;
+    @include respond(tab-land){
+        max-width: 20rem;
+        line-height: 3rem;
+    }
+    @include respond(tab-main){
+        max-width: none;
+        line-height: 5rem;
+    }
+    @include respond(phone){
+        font-size: 2.6rem;
+        max-width: 18rem;
+        line-height: 3rem;
+    }
 }
 
 .subtitle{
@@ -94,6 +127,9 @@ h1,h2,h3,h4,h5,h6{
         margin: 0 auto;
         margin-top: 2rem;
     }
+    @include respond(phone){
+        font-size: 3.5rem;
+    }
 }
 
 .text{
@@ -101,12 +137,22 @@ h1,h2,h3,h4,h5,h6{
     font-size: 2rem;
     font-weight: 400;
     line-height: 4rem;
+    @include respond(phone){
+        font-size: 1.8rem;
+        line-height: 3.5rem;
+    }
+    @include respond(small-phone){
+        font-size: 1.6rem;
+    }
 }
 .mb-4rem{
     margin-bottom: 4rem;
 }
 .mb-2rem{
     margin-bottom: 2rem;
+}
+.mb-1rem{
+    margin-bottom: 1rem;
 }
 .mb-18px{
     margin-bottom: 1.8rem;

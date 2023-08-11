@@ -13,11 +13,46 @@
         display: flex;
         align-items: center;
         height: 5rem;
+        @include respond(tab-main){
+            display: none;
+            position: absolute;
+            transform: translateX(100%);
+            transition: right 1s ease;
+            &.active{
+                display: flex;
+                background-color: #000;
+                width: 33.2rem;
+                height: 57rem;
+                top: 0;
+                right: 0;
+                flex-direction: column;
+                justify-content: center;
+                z-index: 1;
+                transform: translateX(0);
+            } 
+        }
+        @include respond(phone){
+            &.active{
+                width: 100%;
+                height: 100vh;
+            }
+        }
+        &__item{
+            @include respond(tab-main){
+                margin-bottom: 3rem;
+            }
+        }
         &__item:not(:last-child){
             margin-right: 3rem;
+            @include respond(tab-main){ 
+                margin-right: 0;
+            }
         }
         &__item:last-child{
             margin-right: 4rem;
+            @include respond(tab-main){ 
+                margin-right: 0;
+            }
         }
         &__link{
             color: #FFF;
@@ -35,6 +70,68 @@
         svg{
             width: 2.8rem;
             height: 2.8rem;
+        }
+        @include respond(tab-main){
+            z-index: 1;
+            position: absolute;
+            top: 3.1rem;
+            right: 10.5rem;
+        }
+        @include respond(phone){
+            right: 8rem;
+        }
+        @include respond(small-phone){
+            top: 2rem;
+        }
+    }
+    .sidebar{
+        display: none;
+        align-self: center;
+        margin-left: 4rem;
+        width: 4.5rem;
+        height: 4rem;
+        cursor: pointer;
+        position: absolute;
+        top: 3.3rem;
+        right: 2rem;
+        z-index: 1;
+        @include respond(tab-main){
+            display: block;
+        }
+        @include respond(small-phone){
+            top: 2.2rem;
+        }
+        .hamburger{
+            position: relative;
+            width: 4.5rem;
+            height: 0.2rem;
+            background-color: #fff;
+            &::before{
+                content: "";
+                top: 1rem;
+                left: 0;
+            }
+            &::after{
+                content: "";
+                top: 2rem;
+                left: 0;
+            }
+            &::before, &::after{
+                position: absolute;
+                display: block;
+                background-color: #fff;
+                width: 4.5rem;
+                height: 0.2rem;
+            }
+            &.active {
+                transform: translateY(1rem) rotate(45deg);
+                &::before {
+                    transform: translateY(-1rem) rotate(90deg);
+                }
+                &::after {
+                    display: none;
+                }
+            }
         }
     }
 }
