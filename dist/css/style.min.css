@@ -425,6 +425,7 @@ h1, h2, h3, h4, h5, h6 {
     top: 0;
     right: -100%;
     opacity: 0;
+    z-index: 10;
   }
   .header .navbar.active {
     background-color: #000;
@@ -437,6 +438,7 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateX(0);
     opacity: 1;
     right: 0;
+    z-index: 10;
   }
 }
 @media only screen and (max-width: 490px) {
@@ -485,7 +487,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media only screen and (max-width: 980px) {
   .header .icons {
-    z-index: 1;
+    z-index: 10;
     position: absolute;
     top: 3.1rem;
     right: 10.5rem;
@@ -511,7 +513,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   top: 3.3rem;
   right: 2rem;
-  z-index: 1;
+  z-index: 10;
 }
 @media only screen and (max-width: 980px) {
   .header .sidebar {
