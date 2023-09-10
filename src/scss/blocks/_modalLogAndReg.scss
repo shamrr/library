@@ -33,9 +33,6 @@
         letter-spacing: .04rem;
         text-transform: uppercase;
         margin-bottom: 2rem;
-        @include respond(phone){
-            font-size: 2rem;
-        }
         &::after{
             display: none;
         }
