@@ -96,6 +96,7 @@
         border: .1rem solid #000;
         padding: 1.5rem 0 1.5rem 2rem;
         margin-right: 4rem;
+        animation: itemFading 1s ease-in-out;
         @include respond(tab-port){
             margin-right: 2rem;
         }
@@ -176,5 +177,14 @@
     }
     .spring{
         display: none;
+    }
+}
+
+@keyframes itemFading {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }

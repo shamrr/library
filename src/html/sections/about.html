@@ -2,67 +2,41 @@
     <div class="container">
         <h2 class="subtitle about__subtitle">About</h2>
         <div class="text about__text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside </div>
-        <!-- <div class="slider">
-            <div class="slider__line">
-                <img src="../img/slide1.jpg" alt="slide" class="slider__img">
-                <img src="../img/slide2.jpg" alt="slide" class="slider__img">
-                <img src="../img/slide3.jpg" alt="slide" class="slider__img">
-                <img src="../img/slide4.jpg" alt="slide" class="slider__img">
-                <img src="../img/slide5.jpg" alt="slide" class="slider__img">
+
+        <div id="carousel" class="carousel">
+            <div class="carousel__container">
+                <div class="carousel__image fade">
+                    <img src="../../img/slide1.jpg" alt="slide">
+                </div>
+                <div class="carousel__image fade">
+                    <img src="../../img/slide2.jpg" alt="slide">
+                </div>
+                <div class="carousel__image fade">
+                    <img src="../../img/slide3.jpg" alt="slide">
+                </div>
+                <div class="carousel__image fade">
+                    <img src="../../img/slide4.jpg" alt="slide">
+                </div>
+                <div class="carousel__image fade">
+                    <img src="../../img/slide5.jpg" alt="slide">
+                </div>
             </div>
-            <div class="slider__btn-prev">
+            <div class="carousel__btn carousel__btn-prev" onclick="carousel.showImage(-1)">
                 <svg>
                     <use xlink:href="./img/icons/icons.svg#prev"></use>
                 </svg>
             </div>
-            <div class="slider__btn-next">
+            <div class="carousel__btn carousel__btn-next" onclick="carousel.showImage(1)">
                 <svg>
                     <use xlink:href="./img/icons/icons.svg#next"></use>
                 </svg>
             </div>
-            <div class="slider__wrapper">
-                <div class="slider__dot  active-dot"></div>
-                <div class="slider__dot"></div>
-                <div class="slider__dot"></div>
-            </div>
-        </div> -->
-        <div id="carousel" class="carousel">
-            
-            <div class="gallery">
-                <div class="gallery__btn gallery__btn-prev">
-                    <svg>
-                        <use xlink:href="./img/icons/icons.svg#prev"></use>
-                    </svg>
-                </div>
-                <ul>
-                    <li>
-                        <img src="../img/slide1.jpg" alt="img">
-                    </li>
-                    <li>
-                        <img src="../img/slide2.jpg" alt="img">
-                    </li>
-                    <li>
-                        <img src="../img/slide3.jpg" alt="img">
-                    </li>
-                    <li>
-                        <img src="../img/slide4.jpg" alt="img">
-                    </li>
-                    <li>
-                        <img src="../img/slide5.jpg" alt="img">
-                    </li>
-                </ul>
-                <div class="gallery__btn gallery__btn-next">
-                    <svg>
-                        <use xlink:href="./img/icons/icons.svg#next"></use>
-                    </svg>
-                </div>
-            </div>
-            <div class="carousel__wrapper">
-                <div class="carousel__dot  active-dot"></div>
-                <div class="carousel__dot"></div>
-                <div class="carousel__dot"></div>
-                <div class="carousel__dot"></div>
-                <div class="carousel__dot"></div>
+            <div class="carousel__dots">
+                <div class="carousel__dot carousel__dot-1 active-dot"></div>
+                <div class="carousel__dot carousel__dot-2"></div>
+                <div class="carousel__dot carousel__dot-3"></div>
+                <div class="carousel__dot carousel__dot-4"></div>
+                <div class="carousel__dot carousel__dot-5"></div>
             </div>
         </div>
     </div>

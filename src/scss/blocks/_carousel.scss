@@ -1,57 +1,32 @@
 .carousel{
     position: relative;
-    .gallery{
-        max-width: 140rem;
-        width: 100%;
-        overflow: hidden;
-        position: relative;
-        & ul{
-            max-width: 140rem;
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 2.5rem;
-            max-height: 56rem;
-            transition: margin-left 250ms;
-            margin: 0;
-            padding: 0;
-            @include respond(small-phone){
-                max-height: 45rem;
-            }
-        }
-        & li{
-            max-width: 45rem;
-            width: 100%;
-        }
-        &__btn{
-            display: none;
-            cursor: pointer;
-            width: 2rem;
-            height: 3rem;
-            @include respond(tab-main){
-                display: block;
-            }
-            @include respond(tab-port){
-                display: none;       
-            }
-            svg{
-                width: 1.4rem;
-                height: 2.3rem;
-            }
-            &-prev{
-                position: absolute;
-                top: 28.9rem;
-                left: 5.9rem;
-            }
-            &-next{
-                position: absolute;
-                right: 5.9rem;
-                top: 28.9rem;
-            }
-        }
+    width: 100%;
+    height: 56rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @include respond(phone){
+        height: 36rem;
     }
-    &__wrapper{
+    &__container{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2.5rem;
+        width: 100%;
+        max-width: 140rem;
+        overflow: hidden;
+    }
+    &__image{
+        display: none;
+    }
+    &__image img{
+        width: 100%;
+        max-width: 45rem;
+    }
+    &__dots{
         display: flex;
         position: absolute;
         bottom: -4rem;
@@ -63,12 +38,56 @@
         height: 1.6rem;
         border-radius:  50%;
         background-color: #000;
+        z-index: 10;
         cursor: pointer;
         &:not(:last-child){
             margin-right: 1rem;
         }
+        &-4{
+            display: none;
+        }
+        &-5{
+            display: none;
+        }
+        &-6{
+            display: none;
+        }
+        @include respond(tab-main){
+            &-4{
+                display: block;
+            }
+            &-5{
+                display: block;
+            }
+            &-6{
+                display: block;
+            }
+        }
     }
     .active-dot{
         background-color: $main;
+    }
+    &__btn{
+        position: absolute;
+        cursor: pointer;
+        display: none;
+        @include respond(tab-main){
+            display: block;
+        }
+        @include respond(tab-port){
+            display: none;
+        }
+        svg{
+            width: 1.4rem;
+            height: 2.2rem;
+        }
+        &-prev{
+            top: 50%;
+            left: 7.9rem;
+        }
+        &-next{
+            top: 50%;
+            right: 7.9rem;
+        }
     }
 }

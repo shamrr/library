@@ -27,7 +27,7 @@ nav, footer, header, aside {
 
 html, body {
   font-size: 10px;
-  background-color: #fff;
+  background: linear-gradient(180deg, #FFF 63.64%, rgba(255, 255, 255, 0) 95.45%);
   height: 100%;
   width: 100%;
   line-height: 1;
@@ -81,6 +81,7 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 140rem;
   width: 100%;
   margin: 0 auto;
+  position: relative;
 }
 @media only screen and (max-width: 1439px) {
   .container {
@@ -206,65 +207,36 @@ h1, h2, h3, h4, h5, h6 {
 
 .carousel {
   position: relative;
-}
-.carousel .gallery {
-  max-width: 140rem;
   width: 100%;
-  overflow: hidden;
+  height: 56rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media only screen and (max-width: 490px) {
+  .carousel {
+    height: 36rem;
+  }
+}
+.carousel__container {
   position: relative;
-}
-.carousel .gallery ul {
-  max-width: 140rem;
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2.5rem;
-  max-height: 56rem;
-  transition: margin-left 250ms;
-  margin: 0;
-  padding: 0;
-}
-@media only screen and (max-width: 410px) {
-  .carousel .gallery ul {
-    max-height: 45rem;
-  }
-}
-.carousel .gallery li {
-  max-width: 45rem;
   width: 100%;
+  max-width: 140rem;
+  overflow: hidden;
 }
-.carousel .gallery__btn {
+.carousel__image {
   display: none;
-  cursor: pointer;
-  width: 2rem;
-  height: 3rem;
 }
-@media only screen and (max-width: 980px) {
-  .carousel .gallery__btn {
-    display: block;
-  }
+.carousel__image img {
+  width: 100%;
+  max-width: 45rem;
 }
-@media only screen and (max-width: 713px) {
-  .carousel .gallery__btn {
-    display: none;
-  }
-}
-.carousel .gallery__btn svg {
-  width: 1.4rem;
-  height: 2.3rem;
-}
-.carousel .gallery__btn-prev {
-  position: absolute;
-  top: 28.9rem;
-  left: 5.9rem;
-}
-.carousel .gallery__btn-next {
-  position: absolute;
-  right: 5.9rem;
-  top: 28.9rem;
-}
-.carousel__wrapper {
+.carousel__dots {
   display: flex;
   position: absolute;
   bottom: -4rem;
@@ -276,13 +248,61 @@ h1, h2, h3, h4, h5, h6 {
   height: 1.6rem;
   border-radius: 50%;
   background-color: #000;
+  z-index: 10;
   cursor: pointer;
 }
 .carousel__dot:not(:last-child) {
   margin-right: 1rem;
 }
+.carousel__dot-4 {
+  display: none;
+}
+.carousel__dot-5 {
+  display: none;
+}
+.carousel__dot-6 {
+  display: none;
+}
+@media only screen and (max-width: 980px) {
+  .carousel__dot-4 {
+    display: block;
+  }
+  .carousel__dot-5 {
+    display: block;
+  }
+  .carousel__dot-6 {
+    display: block;
+  }
+}
 .carousel .active-dot {
   background-color: #BB945F;
+}
+.carousel__btn {
+  position: absolute;
+  cursor: pointer;
+  display: none;
+}
+@media only screen and (max-width: 980px) {
+  .carousel__btn {
+    display: block;
+  }
+}
+@media only screen and (max-width: 713px) {
+  .carousel__btn {
+    display: none;
+  }
+}
+.carousel__btn svg {
+  width: 1.4rem;
+  height: 2.2rem;
+}
+.carousel__btn-prev {
+  top: 50%;
+  left: 7.9rem;
+}
+.carousel__btn-next {
+  top: 50%;
+  right: 7.9rem;
 }
 
 .btn {
@@ -400,8 +420,241 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.dropMenu {
+  width: 8rem;
+  height: 11.5rem;
+  background-color: #fff;
+  color: #000;
+  position: absolute;
+  top: 7rem;
+  right: 0rem;
+  padding: 0.5rem 0.5rem 2rem 0.5rem;
+}
+@media only screen and (max-width: 980px) {
+  .dropMenu {
+    right: 10.5rem;
+  }
+}
+@media only screen and (max-width: 490px) {
+  .dropMenu {
+    right: 8rem;
+  }
+}
+.dropMenu__auth {
+  display: none;
+}
+.dropMenu__noAuth {
+  display: none;
+}
+.dropMenu__subtitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2rem;
+  margin-bottom: 1.5rem;
+}
+.dropMenu__subtitle::after {
+  width: 4rem;
+  background-color: #BB945F;
+  margin-top: 0.4rem;
+}
+.dropMenu__item {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2rem;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+}
+.dropMenu__item:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.modal {
+  background-color: #fff;
+  padding: 2rem 2.5rem;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal__profile {
+  padding: 0;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+.modal-overlay__login {
+  display: none;
+}
+.modal-overlay__register {
+  display: none;
+}
+.modal-overlay__profile {
+  display: none;
+}
+.modal__subtitle {
+  font-size: 2rem;
+  line-height: 2rem;
+  letter-spacing: 0.04rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+.modal__subtitle::after {
+  display: none;
+}
+.modal-login {
+  max-width: 25rem;
+  width: 100%;
+  display: none;
+}
+.modal-register {
+  max-width: 25rem;
+  width: 100%;
+}
+.modal-question {
+  text-shadow: 0rem 0.2rem 0.3rem rgba(255, 255, 255, 0.16);
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 1rem;
+}
+.modal-question a {
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  text-decoration: underline;
+  margin-left: 1rem;
+  color: #000;
+}
+.modal__close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.modal__container {
+  display: flex;
+}
+.modal__container-left {
+  width: 17rem;
+  height: 40rem;
+  background-color: #0C0C0E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.modal__container-right {
+  width: 43rem;
+  height: 40rem;
+  padding: 4rem 6rem 4rem 2rem;
+}
+.modal__img {
+  width: 8rem;
+  height: 8rem;
+  background-color: #fff;
+  color: #BB945F;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal__name {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background-color: #fff;
+}
+.modal__title {
+  font-size: 4rem;
+  text-transform: uppercase;
+  margin-bottom: 4rem;
+}
+.modal__title::after {
+  display: none;
+}
+.modal-items {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.modal-item {
+  justify-self: center;
+}
+.modal-item__text {
+  margin-bottom: 1rem;
+  line-height: 2rem;
+}
+.modal-item__icon {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+.modal-item__value {
+  font-size: 1rem;
+  text-align: center;
+}
+.modal__text {
+  font-size: 2.5rem;
+}
+.modal__list {
+  margin-bottom: 4rem;
+}
+.modal__list li {
+  list-style-type: disc;
+  line-height: 2rem;
+  margin-left: 2rem;
+}
+.modal__list li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.modal__card {
+  line-height: 2rem;
+}
+.modal__card img {
+  cursor: pointer;
+}
+.modal__number {
+  color: #BB945F;
+  margin: 0 1.5rem;
+}
+
+.form {
+  width: 100%;
+  max-width: 20rem;
+  margin: 0 auto;
+}
+.form__label {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2rem;
+  letter-spacing: 0.03rem;
+}
+.form__input {
+  border: 1px solid #BB945F;
+  height: 2rem;
+  margin: 1rem 0;
+  width: 100%;
+}
+.form__btn {
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 7.5rem;
+  height: 3rem;
+}
+
 .header {
   background-color: #0C0C0E;
+  position: relative;
 }
 .header__line {
   display: flex;
@@ -411,6 +664,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 .header__container {
   display: flex;
+}
+.header__name {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 5rem;
+  color: #BB945F;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+@media only screen and (max-width: 980px) {
+  .header__name {
+    position: absolute;
+    right: 10rem;
+    top: 2rem;
+  }
 }
 .header .navbar {
   display: flex;
@@ -719,6 +988,7 @@ h1, h2, h3, h4, h5, h6 {
   border: 0.1rem solid #000;
   padding: 1.5rem 0 1.5rem 2rem;
   margin-right: 4rem;
+  animation: itemFading 1s ease-in-out;
 }
 @media only screen and (max-width: 713px) {
   .favorites-item {
@@ -811,6 +1081,14 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 
+@keyframes itemFading {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .coffee-shop {
   padding: 2rem 0 4rem 0;
 }

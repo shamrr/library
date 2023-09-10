@@ -1,0 +1,159 @@
+.modal{
+    background-color: #fff;
+    padding: 2rem 2.5rem;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &__profile{
+        padding: 0;
+    }
+    &-overlay{
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); 
+        z-index: 100;
+        &__login{
+            display: none;
+        }
+        &__register{
+            display: none;
+        }
+        &__profile{
+            display: none;
+        }
+    }
+    &__subtitle{
+        font-size: 2rem;
+        line-height: 2rem;
+        letter-spacing: .04rem;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        &::after{
+            display: none;
+        }
+    }
+    &-login{
+        max-width: 25rem;
+        width: 100%;
+        display: none;
+    }
+    &-register{
+        max-width: 25rem;
+        width: 100%;
+    }
+    &-question{
+        text-shadow: 0rem .2rem .3rem rgba(255, 255, 255, 0.16);
+        font-size: 1rem; 
+        font-weight: 400;
+        margin-top: 1rem;
+        a{
+            font-weight: 700;
+            letter-spacing: .1rem;
+            text-decoration: underline;
+            margin-left: 1rem;
+            color: #000;
+        }
+    }
+    &__close{
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        font-weight: bold;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    &__container{
+        display: flex;
+        &-left{
+            width: 17rem;
+            height: 40rem;
+            background-color: #0C0C0E;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        &-right{
+            width: 43rem;
+            height: 40rem;
+            padding: 4rem 6rem 4rem 2rem;
+        }
+    }
+    &__img{
+        width: 8rem;
+        height: 8rem;
+        background-color: #fff;
+        color: $main;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__name{
+        display: inline-block;
+        padding: .5rem 1.5rem;
+        background-color: #fff;
+    }
+    &__title{
+        font-size: 4rem;
+        text-transform: uppercase;
+        margin-bottom: 4rem;
+        &::after{
+            display: none;
+        }
+    }
+    &-items{
+        display: flex;
+
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+    &-item{
+        justify-self: center;
+        &__text{
+            margin-bottom: 1rem;
+            line-height: 2rem;
+        }
+        &__icon{
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 1rem;
+        }
+        &__value{
+            font-size: 1rem;
+            text-align: center;
+        }
+    }
+    &__text{
+        font-size: 2.5rem;
+    }
+    &__list{
+        margin-bottom: 4rem;
+        li{
+            list-style-type: disc;
+            line-height: 2rem;
+            margin-left: 2rem;
+            &:not(:last-child){
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    &__card{
+        line-height: 2rem;
+        img{
+            cursor: pointer;
+        }
+    }
+    &__number{
+        color: $main;
+        margin: 0 1.5rem;
+    }
+}
